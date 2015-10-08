@@ -1,0 +1,54 @@
+<section id="header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" id="brand" src="http://1.bp.blogspot.com/-RYAtIOXdvdI/VYQ2FyIpmOI/AAAAAAAAALA/zIi9RaW-1JY/s1600/256px-Email_Shiny_Icon.svg.png">
+        </a>
+      </div>
+    </div>
+    <span class="pull-right add"><button data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></button></span>
+  </nav>
+</section>
+
+<section id="contactList">
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="container">
+          <h1>Add Contact</h1>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input ng-model="contact.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input ng-model="contact.name" type="name" class="form-control" id="name" placeholder="name">
+            </div>
+            <button type="submit" ng-click="addNewContact(contact)" class="btn btn-primary">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default" id="panel1" ng-repeat="contact in contacts">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <h1></h1>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <a href=""></a>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
